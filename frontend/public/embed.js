@@ -14,8 +14,8 @@
     "border:1px solid rgba(255,255,255,0.08);border-radius:16px;" +
     "box-shadow:0 8px 40px rgba(0,0,0,0.4);background:#0a0a0f;" +
     "z-index:2147483646;display:none;overflow:hidden}" +
-    "@media(max-width:640px){" +
-    "#portfolio-chat-btn{bottom:110px;right:20px}" +
+    "@media(max-width:768px){" +
+    "#portfolio-chat-btn{bottom:140px;right:20px}" +
     "#portfolio-chat-frame{bottom:0;right:0;width:100%;height:100%;border-radius:0;border:none}}";
   document.head.appendChild(css);
 
@@ -34,7 +34,7 @@
   document.body.appendChild(btn);
 
   var isOpen = false;
-  var isMobile = function () { return window.innerWidth <= 640; };
+  var isMobile = function () { return window.innerWidth <= 768; };
 
   btn.addEventListener("click", function () {
     isOpen = !isOpen;
