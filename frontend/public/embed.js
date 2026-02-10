@@ -15,7 +15,7 @@
     "box-shadow:0 8px 40px rgba(0,0,0,0.4);background:#0a0a0f;" +
     "z-index:2147483646;display:none;overflow:hidden}" +
     "@media(max-width:768px){" +
-    "#portfolio-chat-btn{bottom:100px;right:20px}" +
+    "#portfolio-chat-btn{bottom:125px;right:20px}" +
     "#portfolio-chat-frame{bottom:0;right:0;width:100%;height:85vh;" +
     "border-radius:16px 16px 0 0;border:none;" +
     "border-top:1px solid rgba(255,255,255,0.1)}}";
@@ -26,6 +26,7 @@
   iframe.id = "portfolio-chat-frame";
   iframe.src = CHAT_URL;
   iframe.title = "Chat med Vetle sin assistent";
+  iframe.setAttribute("scrolling", "no");
   document.body.appendChild(iframe);
 
   // Toggle button
@@ -36,10 +37,25 @@
   document.body.appendChild(btn);
 
   var isOpen = false;
+  var isMobile = function () { return window.innerWidth <= 768; };
 
   btn.addEventListener("click", function () {
     isOpen = !isOpen;
     iframe.style.display = isOpen ? "block" : "none";
     btn.innerHTML = isOpen ? "✕" : "💬";
+
+    if (isOpen && isMobile()) {
+      btn.style.top = "8px";
+      btn.style.bottom = "auto";
+      btn.style.right = "8px";
+      btn.style.width = "44px";
+      btn.style.height = "44px";
+      btn.style.borderRadius = "12px";
+      btn.style.fontSize = "18px";
+      btn.style.background = "rgba(255,255,255,0.08)";
+      btn.style.boxShadow = "none";
+    } else {
+      btn.style.cssText = "";
+    }
   });
 })();
