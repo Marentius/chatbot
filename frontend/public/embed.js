@@ -16,7 +16,9 @@
     "z-index:2147483646;display:none;overflow:hidden}" +
     "@media(max-width:768px){" +
     "#portfolio-chat-btn{bottom:100px;right:20px}" +
-    "#portfolio-chat-frame{bottom:0;right:0;width:100%;height:100%;border-radius:0;border:none}}";
+    "#portfolio-chat-frame{bottom:0;right:0;width:100%;height:85vh;" +
+    "border-radius:16px 16px 0 0;border:none;" +
+    "border-top:1px solid rgba(255,255,255,0.1)}}";
   document.head.appendChild(css);
 
   // Chat iframe
@@ -34,35 +36,10 @@
   document.body.appendChild(btn);
 
   var isOpen = false;
-  var isMobile = function () { return window.innerWidth <= 768; };
 
   btn.addEventListener("click", function () {
     isOpen = !isOpen;
     iframe.style.display = isOpen ? "block" : "none";
     btn.innerHTML = isOpen ? "✕" : "💬";
-
-    if (isOpen && isMobile()) {
-      btn.style.top = "16px";
-      btn.style.bottom = "auto";
-      btn.style.right = "16px";
-      btn.style.width = "40px";
-      btn.style.height = "40px";
-      btn.style.borderRadius = "12px";
-      btn.style.fontSize = "16px";
-      btn.style.background = "rgba(255,255,255,0.1)";
-      btn.style.backdropFilter = "blur(10px)";
-      btn.style.boxShadow = "none";
-    } else {
-      btn.style.top = "";
-      btn.style.bottom = "";
-      btn.style.right = "";
-      btn.style.width = "";
-      btn.style.height = "";
-      btn.style.borderRadius = "";
-      btn.style.fontSize = "";
-      btn.style.background = "";
-      btn.style.backdropFilter = "";
-      btn.style.boxShadow = "";
-    }
   });
 })();
