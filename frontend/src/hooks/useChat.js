@@ -2,7 +2,7 @@ import { useState, useRef, useCallback, useEffect } from "react";
 
 const WS_URL =
   import.meta.env.VITE_WS_URL?.replace(/^http/, "ws") ||
-  `ws://${window.location.hostname}:8080`;
+  `${window.location.protocol === "https:" ? "wss:" : "ws:"}//${window.location.host}`;
 
 export default function useChat() {
   const [messages, setMessages] = useState([]);
