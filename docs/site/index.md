@@ -6,11 +6,11 @@ Kilde: https://marentius.no
 
 ## Om Meg
 
-Jegerenengasjertfullstack-utviklermed2årserfaring,ansatthosVismaSmartSkillAS.
+Jeg er en engasjert fullstack-utvikler med 2 års erfaring, ansatt hos Visma SmartSkill AS.
 
-Jegjobbermedåbyggemodernewebapplikasjonerogharerfaringmedaltfrafrontendtilbackend.
+Jeg jobber med å bygge moderne webapplikasjoner og har erfaring med alt fra frontend til backend.
 
-Jegbrennerforcleancode,godarkitekturogkontinuerliglæring.
+Jeg brenner for clean code, god arkitektur og kontinuerlig læring.
 
 År erfaring
 
@@ -61,16 +61,32 @@ Webapplikasjon som visualiserer live salgsdata fra 100+ butikker på et interakt
 
 Transformerte standard Visma-innloggingssider til unike, merkevare-tilpassede opplevelser for fire ulike kunder.
 
+### Portfolio Chatbot
+
+RAG-basert chatbot som lar besøkende stille spørsmål om erfaring, prosjekter og ferdigheter med AI-drevet kontekstuell forståelse.
+
+### RegTime
+
+Skybasert timeregistreringssystem med kalendervisning, rapportgenerering og Excel-eksport for enkel arbeidstidslogging.
+
+### FileConverter
+
+Universelt filkonverteringsverktøy med batch-støtte, OCR-funksjonalitet og både CLI- og desktop GUI-grensesnitt.
+
+### Almesus
+
+Festivalside for Almesus i Jelsnes med aftermovie, bildegalleri og festivalinformasjon.
+
 ## Arbeidserfaring
 
-### Fullstack Developer
+### Developer
 
 Visma SmartSkill AS
 
-Jobber med React, og Google Cloud.
+Jobber med verktøy som React, Next.js, AI og skyteknologi
 
 ## La oss snakke
 
-Harduetspennendeprosjektellerbareviltaenprat?Ikkenølmedåtakontakt!
+Har du et spennende prosjekt eller bare vil ta en prat? Ikke nøl med å ta kontakt!
 
-©2026Vetle Marentius Nilsen. Bygget med Next.js & React Bits.
+© 2026 Vetle Marentius Nilsen.

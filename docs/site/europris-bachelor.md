@@ -4,7 +4,7 @@ Kilde: https://marentius.no/projects/europris-bachelor
 
 # Sanntids Salgsvisualisering
 
-EnwebapplikasjonsomvisualiserersalgsdataisanntidpåetinteraktivtNorgeskart,utvikletforågiEuroprisinnsiktisalgsaktivitetgjennomenengasjerendeogvisuelttydeligpresentasjon.
+En webapplikasjon som visualiserer salgsdata i sanntid på et interaktivt Norgeskart, utviklet for å gi Europris innsikt i salgsaktivitet gjennom en engasjerende og visuelt tydelig presentasjon.
 
 Gj.snitt latens
 
@@ -24,19 +24,19 @@ Salgsdata visualiseres som animerte SVG-blomster i ulike farger og størrelser b
 
 0 - 299 kr
 
-Blåblomst,30px
+Blå blomst, 30px
 
 ### Mellomstort salg
 
 300 - 999 kr
 
-Oransjeblomst,60px
+Oransje blomst, 60px
 
 ### Stort salg
 
 1000+ kr
 
-Grønnblomst,120px
+Grønn blomst, 120px
 
 ## Nøkkelfunksjoner
 
@@ -96,7 +96,7 @@ Applikasjonen ble testet på Europris sin storskjerm på hovedkontoret. Alle vis
 
 Løsningen ble beskrevet som "enkel og oversiktlig" av testpersonene. Alle oppgaver ble gjennomført uten problemer, og det ble ikke avdekket noen tekniske feil.
 
-Jegutviklet hele den tekniske løsningen alene- fra backend-arkitektur med Java Spring Boot og Azure Event Hubs-integrasjon, til frontend med React/Next.js, Leaflet kartvisualisering og WebSocket sanntidskommunikasjon.
+Jeg utviklet hele den tekniske løsningen alene - fra backend-arkitektur med Java Spring Boot og Azure Event Hubs-integrasjon, til frontend med React/Next.js, Leaflet kartvisualisering og WebSocket sanntidskommunikasjon.
 
 Prosjektet ble gjennomført som bacheloroppgave i et team på fire, der jeg hadde ansvaret for all koding mens teamet bidro med research, dokumentasjon og testing.
 

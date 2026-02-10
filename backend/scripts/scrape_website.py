@@ -15,6 +15,10 @@ PAGES = [
     ("https://marentius.no", "index"),
     ("https://marentius.no/projects/europris-bachelor", "europris-bachelor"),
     ("https://marentius.no/projects/visma-branding", "visma-branding"),
+    ("https://marentius.no/projects/chatbot", "chatbot"),
+    ("https://marentius.no/projects/regtime", "regtime"),
+    ("https://marentius.no/projects/fileconverter", "fileconverter"),
+    ("https://marentius.no/projects/almesus", "almesus"),
 ]
 
 
@@ -47,15 +51,15 @@ def extract_content(soup: BeautifulSoup) -> tuple[str, str]:
     for element in content_area.descendants:
         if element.name in ("h1", "h2", "h3", "h4"):
             level = int(element.name[1])
-            text = element.get_text(strip=True)
+            text = element.get_text(" ", strip=True)
             if text:
                 lines.append(f"\n{'#' * level} {text}\n")
         elif element.name == "li":
-            text = element.get_text(strip=True)
+            text = element.get_text(" ", strip=True)
             if text:
                 lines.append(f"- {text}")
         elif element.name == "p":
-            text = element.get_text(strip=True)
+            text = element.get_text(" ", strip=True)
             if text:
                 lines.append(f"\n{text}\n")
 
