@@ -19,7 +19,16 @@ export default function ChatWidget() {
           <span className="chat-logo">VM</span>
           <span>Spør om Vetle</span>
         </div>
-        <span className={`status-dot ${isConnected ? "connected" : ""}`} />
+        <div className="chat-header-right">
+          <span className={`status-dot ${isConnected ? "connected" : ""}`} />
+          <button
+            className="chat-close-btn"
+            onClick={() => window.parent.postMessage({ type: "close-chat" }, "*")}
+            aria-label="Lukk chat"
+          >
+            ✕
+          </button>
+        </div>
       </div>
 
       <div className="chat-messages">

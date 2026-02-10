@@ -39,23 +39,38 @@
   var isOpen = false;
   var isMobile = function () { return window.innerWidth <= 768; };
 
-  btn.addEventListener("click", function () {
-    isOpen = !isOpen;
-    iframe.style.display = isOpen ? "block" : "none";
-    btn.innerHTML = isOpen ? "✕" : "💬";
+  function closeChat() {
+    isOpen = false;
+    iframe.style.display = "none";
+    btn.innerHTML = "💬";
+    btn.style.cssText = "";
+    btn.style.display = "";
+  }
 
-    if (isOpen && isMobile()) {
-      btn.style.top = "8px";
-      btn.style.bottom = "auto";
-      btn.style.right = "8px";
-      btn.style.width = "44px";
-      btn.style.height = "44px";
-      btn.style.borderRadius = "12px";
-      btn.style.fontSize = "18px";
-      btn.style.background = "rgba(255,255,255,0.08)";
-      btn.style.boxShadow = "none";
+  function openChat() {
+    isOpen = true;
+    iframe.style.display = "block";
+
+    if (isMobile()) {
+      // Hide external button on mobile — close button is inside the chat header
+      btn.style.display = "none";
     } else {
-      btn.style.cssText = "";
+      btn.innerHTML = "✕";
+    }
+  }
+
+  btn.addEventListener("click", function () {
+    if (isOpen) {
+      closeChat();
+    } else {
+      openChat();
+    }
+  });
+
+  // Listen for close-chat message from iframe (mobile close button inside header)
+  window.addEventListener("message", function (e) {
+    if (e.data && e.data.type === "close-chat") {
+      closeChat();
     }
   });
 })();
